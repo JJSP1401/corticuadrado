@@ -3,6 +3,7 @@ import morgan from 'morgan';
 import compression from 'compression';
 import helmet from 'helmet';
 import cors from 'cors';
+import 'dotenv/config';
 
 const app = express();
 

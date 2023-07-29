@@ -1,15 +1,15 @@
 import { Schema, model, Document } from 'mongoose';
 
-export type ProductDocument = Document & {
+export interface ProductDocument {
     _id: string;
     name: string;
     sku: string;
     description: string;
-    price: string;
+    price: number;
     created_at: number;
 }
 
-const productSchema = new Schema({
+const productSchema = new Schema<ProductDocument>({
     name: {
         type: String,
         required: true
